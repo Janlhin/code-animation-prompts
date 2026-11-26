@@ -13,12 +13,11 @@ concurrency:
   group: governance-${{ github.ref }}
   cancel-in-progress: true
 
-timeout-minutes: 10
-
 jobs:
   governance:
     name: Governance files
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
